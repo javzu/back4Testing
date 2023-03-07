@@ -4,8 +4,10 @@ const {promisify} = require('util');
 
   
     console.log('DB connection...');
+   
     const connection = mysql.createPool(config.db);
-  
+    
+  /*
     connection.getConnection(error=>{
         if (error) throw error;
         console.log('DB connected');
@@ -13,7 +15,7 @@ const {promisify} = require('util');
     
   
     connection.query=promisify(connection.query);
-
+*/
 
 
 module.exports=connection;
